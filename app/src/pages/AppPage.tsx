@@ -87,7 +87,18 @@ const AppPage = () => {
             <div className="row-score">
               <div className="row-score-element">Отлично</div>
             </div>
-            <div className="row-length">Плеер</div>
+            <div className="row-length">
+              <div className="row-audio">
+                <div>12:06</div>
+                <div className="row-audio-play">
+                  <img src="/assets/button-play.png" alt="play" />
+                </div>
+                <div className="row-audio-line"></div>
+                <div className="row-audio-download">
+                  <img src="/assets/button-download.png" alt="download" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="row">
@@ -107,7 +118,7 @@ const AppPage = () => {
             <div className="row-score">
               <div className="row-score-element">Отлично</div>
             </div>
-            <div className="row-length">Плеер</div>
+            <div className="row-length">12:06</div>
           </div>
 
           <div className="row">
@@ -127,7 +138,7 @@ const AppPage = () => {
             <div className="row-score">
               <div className="row-score-element">Отлично</div>
             </div>
-            <div className="row-length">Плеер</div>
+            <div className="row-length">12:06</div>
           </div>
 
           <div className="row">
@@ -147,7 +158,7 @@ const AppPage = () => {
             <div className="row-score">
               <div className="row-score-element">Отлично</div>
             </div>
-            <div className="row-length">Плеер</div>
+            <div className="row-length">12:06</div>
           </div>
 
           <div className="row">
@@ -167,7 +178,7 @@ const AppPage = () => {
             <div className="row-score">
               <div className="row-score-element">Отлично</div>
             </div>
-            <div className="row-length">Плеер</div>
+            <div className="row-length">12:06</div>
           </div>
         </div>
       </div>

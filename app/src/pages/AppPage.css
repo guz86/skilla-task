@@ -83,12 +83,50 @@
 
 .row-score {
   text-align: left;
-  width: 33.9%;
+  width: 12.09%;
 }
 
 .row-length {
-  text-align: right;
-  width: 8.09%;
+  justify-content: flex-end;
+  width: 28.9%;
+}
+
+.row-audio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  border-radius: 48px;
+  background: rgb(234, 240, 250);
+  margin-right: 20px;
+}
+
+.row-audio-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: rgb(255, 255, 255);
+  width: 24px;
+  height: 24px;
+}
+
+.row-audio-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 164px;
+  height: 4px;
+  border-radius: 50px;
+  background: rgb(173, 191, 223);
+}
+
+.row-audio-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .rows {
