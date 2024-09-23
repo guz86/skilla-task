@@ -26,6 +26,11 @@
   width: 9.49%;
 }
 
+.row-avatar-img {
+  width: 32px;
+  height: 32px;
+}
+
 .row-phone {
   text-align: left;
   width: 23.9%;

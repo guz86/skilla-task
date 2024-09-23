@@ -19,6 +19,7 @@ const TableRow: React.FC<TableRowProps> = ({
   score,
   length,
 }) => {
+  
   return (
     <div className="row">
       <div className="row-type">
@@ -26,7 +27,11 @@ const TableRow: React.FC<TableRowProps> = ({
       </div>
       <div className="row-time">{time}</div>
       <div className="row-avatar">
-        <img src={avatar} alt="avatar" />
+        <img
+          className="row-avatar-img"
+          src={avatar}
+          alt="avatar"
+        />
       </div>
       <div className="row-phone">{phone}</div>
       <div className="row-source">{source}</div>
