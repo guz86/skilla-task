@@ -4,15 +4,15 @@ import { getCallRecord } from '../../utils/apiGetRecord';
 interface AudioRowProps {
   length: string;
   isHovered: boolean;
-  recordId: number;
-  partnershipId: string;
+  record: string;
+  partnership_id: string;
 }
 
 const AudioRow: React.FC<AudioRowProps> = ({
   length,
   isHovered,
-  recordId,
-  partnershipId,
+  record,
+  partnership_id,
 }) => {
   if (!length) {
     return null;
@@ -20,8 +20,10 @@ const AudioRow: React.FC<AudioRowProps> = ({
 
   const handlePlay = async () => {
     try {
-      const audioUrl = await getCallRecord({ recordId, partnershipId });
+      const audioUrl = await getCallRecord({ record, partnership_id });
+      console.log(audioUrl);
       const newAudio = new Audio(audioUrl);
+
       newAudio.play();
     } catch (error) {
       console.error('Ошибка при воспроизведении записи:', error);

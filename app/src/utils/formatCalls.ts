@@ -29,8 +29,8 @@ export const formatCalls = (calls: Call[]) => {
       source: call.source || '',
       score: 'Отлично',
       length: callLength,
-      id: call.id,
-      partnershipId: call.partnershipId,
+      record: call.record,
+      partnership_id: call.partnership_id,
     };
   });
 };

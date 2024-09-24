@@ -2,7 +2,8 @@ import axios, { AxiosError } from 'axios';
 
 export interface Call {
   id: number;
-  partnershipId: string;
+  record: string;
+  partnership_id: string;
   date: string;
   time: number;
   from_number: string;

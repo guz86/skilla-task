@@ -1,35 +1,43 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 const BASE_URL = 'https://api.skilla.ru/mango/getRecord';
 const token = 'testtoken';
 
 interface GetCallRecordParams {
-  recordId: number;
-  partnershipId: string;
+  record: string;
+  partnership_id: string;
+}
+
+interface ApiError {
+  description: string;
 }
 
 export const getCallRecord = async ({
-  recordId,
-  partnershipId,
+  record,
+  partnership_id,
 }: GetCallRecordParams): Promise<string> => {
-  const requestBody = {
-    record: recordId,
-    partnership_id: partnershipId,
-  };
-
   try {
-    const response = await axios.post(BASE_URL, requestBody, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      responseType: 'blob',
-    });
+    const url = `${BASE_URL}?record=${encodeURIComponent(record)}&partnership_id=${encodeURIComponent(partnership_id)}`;
+
+    const response = await axios.post<Blob>(
+      url,
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        responseType: 'blob',
+      }
+    );
 
     const audioUrl = URL.createObjectURL(response.data);
     return audioUrl;
-  } catch (error) {
+  } catch (err) {
+    const error = err as AxiosError<ApiError>;
     console.error('Ошибка при получении записи звонка:', error);
-    throw error;
+    const errorMessage = error.response?.data
+      ? error.response.data.description
+      : 'Ошибка сети';
+    throw new Error(errorMessage);
   }
 };

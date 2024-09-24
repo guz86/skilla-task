@@ -10,8 +10,8 @@ interface TableRowProps {
   source: string;
   score: string;
   length: string;
-  id: number;
-  partnershipId: string;
+  record: string;
+  partnership_id: string;
 }
 
 const TableRow: React.FC<TableRowProps> = ({
@@ -22,8 +22,8 @@ const TableRow: React.FC<TableRowProps> = ({
   source,
   score,
   length,
-  id,
-  partnershipId,
+  record,
+  partnership_id,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -49,8 +49,8 @@ const TableRow: React.FC<TableRowProps> = ({
         <AudioRow
           length={length}
           isHovered={isHovered}
-          recordId={id}
-          partnershipId={partnershipId}
+          record={record}
+          partnership_id={partnership_id}
         />
       </div>
     </div>
