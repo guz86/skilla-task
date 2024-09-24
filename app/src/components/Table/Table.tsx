@@ -9,6 +9,8 @@ interface TableRowData {
   source: string;
   score: string;
   length: string;
+  id: number;
+  partnershipId: string;
 }
 
 interface TableProps {

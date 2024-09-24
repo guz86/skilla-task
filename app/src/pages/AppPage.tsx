@@ -7,7 +7,6 @@ import { formatCalls } from '../utils/formatCalls';
 
 const AppPage = () => {
   const [rows, setRows] = useState<Call[]>([]);
-  const token = 'testtoken';
 
   useEffect(() => {
     const getCalls = async () => {
@@ -20,7 +19,7 @@ const AppPage = () => {
         const dateEnd = endDate.toISOString().split('T')[0];
         const inOut = '';
 
-        const calls = await fetchCalls(dateStart, dateEnd, inOut, token);
+        const calls = await fetchCalls(dateStart, dateEnd, inOut);
         setRows(calls);
       } catch (error) {
         console.error(error);
@@ -28,7 +27,7 @@ const AppPage = () => {
     };
 
     getCalls();
-  }, [token]);
+  }, []);
 
   const formattedRows = formatCalls(rows);
 
