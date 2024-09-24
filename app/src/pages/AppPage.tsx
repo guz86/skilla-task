@@ -7,6 +7,7 @@ import { formatCalls } from '../utils/formatCalls';
 
 const AppPage = () => {
   const [rows, setRows] = useState<Call[]>([]);
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
     const getCalls = async () => {
@@ -17,9 +18,8 @@ const AppPage = () => {
 
         const dateStart = startDate.toISOString().split('T')[0];
         const dateEnd = endDate.toISOString().split('T')[0];
-        const inOut = '';
 
-        const calls = await fetchCalls(dateStart, dateEnd, inOut);
+        const calls = await fetchCalls(dateStart, dateEnd, filter);
         setRows(calls);
       } catch (error) {
         console.error(error);
@@ -27,13 +27,13 @@ const AppPage = () => {
     };
 
     getCalls();
-  }, []);
+  }, [filter]);
 
   const formattedRows = formatCalls(rows);
 
   return (
     <div className="wrapper">
-      <Filters />
+      <Filters onFilterChange={setFilter} />
       <Table rows={formattedRows} />
     </div>
   );
