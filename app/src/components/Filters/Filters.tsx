@@ -71,19 +71,19 @@ const Filters: React.FC<FiltersProps> = ({ onFilterChange }) => {
         {isMenuOpen && (
           <div className="dropdown-menu">
             <div
-              className="dropdown-item"
+              className={`dropdown-item ${currentFilter === 'Все типы' ? 'active-filter' : ''}`}
               onClick={() => handleFilterChange('')}
             >
               Все типы
             </div>
             <div
-              className="dropdown-item"
+              className={`dropdown-item ${currentFilter === 'Входящие' ? 'active-filter' : ''}`}
               onClick={() => handleFilterChange('1')}
             >
               Входящие
             </div>
             <div
-              className="dropdown-item"
+              className={`dropdown-item ${currentFilter === 'Исходящие' ? 'active-filter' : ''}`}
               onClick={() => handleFilterChange('0')}
             >
               Исходящие
