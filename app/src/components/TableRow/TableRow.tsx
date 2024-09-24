@@ -1,4 +1,6 @@
+import AudioRow from '../AudioRow/AudioRow';
 import './TableRow.css';
+import { useState } from 'react';
 
 interface TableRowProps {
   typeImage: string;
@@ -19,9 +21,14 @@ const TableRow: React.FC<TableRowProps> = ({
   score,
   length,
 }) => {
-  
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="row">
+    <div 
+      className="row" 
+      onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="row-type">
         <img className="row-call-image" src={typeImage} alt="incoming" />
       </div>
@@ -39,16 +46,7 @@ const TableRow: React.FC<TableRowProps> = ({
         <div className="row-score-element">{score}</div>
       </div>
       <div className="row-length">
-        <div className="row-audio">
-          <div>{length}</div>
-          <div className="row-audio-play">
-            <img src="/assets/button-play.png" alt="play" />
-          </div>
-          <div className="row-audio-line"></div>
-          <div className="row-audio-download">
-            <img src="/assets/button-download.png" alt="download" />
-          </div>
-        </div>
+        <AudioRow length={length} isHovered={isHovered} />
       </div>
     </div>
   );

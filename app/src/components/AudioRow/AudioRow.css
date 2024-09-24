@@ -1,0 +1,66 @@
+.row-audio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    border-radius: 48px;
+    background: rgb(234, 240, 250);
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+.row-audio-time {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    margin-right: 20px;
+}
+
+
+
+.row-audio-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    background: rgb(255, 255, 255);
+    width: 24px;
+    height: 24px;
+}
+
+.row-audio-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 4px;
+    border-radius: 50px;
+    background: rgb(173, 191, 223);
+}
+
+.row-audio-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.row-call-image {
+    padding: 6px;
+}
+
+.row-score-element {
+    padding: 6px 8px;
+    border: 1px solid rgb(40, 168, 121);
+    border-radius: 4px;
+    background: rgb(219, 248, 239);
+    width: 70px;
+    color: rgb(0, 167, 117);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: left;
+}

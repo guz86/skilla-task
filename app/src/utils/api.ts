@@ -42,8 +42,6 @@ export const fetchCalls = async (
 
 
         console.log(response.data.results);
-        const sources = response.data.results.map(call => call.source);
-console.log(sources);
 
         return response.data.results;
     } catch (err) {

@@ -13,6 +13,10 @@ export const formatCalls = (calls: Call[]) => {
             typeImage = call.status === 'Не дозвонился' ? '/assets/insanely.png' : typeImage;
         }
 
+        const formattedMinutes = String(Math.floor(call.time / 60));
+        const formattedSeconds = String(call.time % 60).padStart(2, '0');
+        const callLength = call.time > 0 ? `${formattedMinutes}:${formattedSeconds}` : '';
+
         return {
             typeImage,
             time: `${hours}:${minutes}`,
@@ -20,7 +24,7 @@ export const formatCalls = (calls: Call[]) => {
             phone: call.from_number,
             source: call.source || '',
             score: 'Отлично',
-            length: `${Math.floor(call.time / 60)}:${call.time % 60}`,
+            length: callLength,
         };
     });
 };
