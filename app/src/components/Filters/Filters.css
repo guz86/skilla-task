@@ -1,108 +1,107 @@
 .filters {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
 }
 
 .type-filter {
-    color: rgb(94, 119, 147);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 148%;
+  color: rgb(94, 119, 147);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
 }
 
 .day-filter {
-    color: rgb(0, 44, 251);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0%;
+  color: rgb(0, 44, 251);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
 }
 
 .day-filter {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .day-filter-number {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .filter-arrow-icon {
-    width: 17px;
+  width: 17px;
 }
 
 .dropdown-button {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-    color: #5e7793;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 148%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #5e7793;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
 }
 
 .arrow-icon {
-    padding: 0px 4px;
+  padding: 0px 4px;
 }
 
-
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #bbb;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-    margin-top: 3px;
-    border-radius: 8px;
-    width: 133px;
-    text-align: left;
-    color: #2B2D33;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #bbb;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  margin-top: 3px;
+  border-radius: 8px;
+  width: 133px;
+  text-align: left;
+  color: #2b2d33;
 }
 
 .type-filter .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-item {
-    padding: 7px 12px 7px 12px;
-    cursor: pointer;
+  padding: 7px 12px 7px 12px;
+  cursor: pointer;
 }
 
 .dropdown-item:hover {
-    background: rgb(222, 228, 255);
+  background: rgb(222, 228, 255);
 }
 
 .arrow-up {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .arrow-down {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .filter-text {
-    color: #5e7793;
+  color: #5e7793;
 }
 
 .active-filter {
-    color: #015EF5;
+  color: #015ef5;
 }
 
-.reset-filters{
-    padding-left: 10px;
+.reset-filters {
+  padding-left: 10px;
 }
 
-.reset-filters-close{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    cursor: pointer;
+.reset-filters-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
 }
