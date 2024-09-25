@@ -15,6 +15,7 @@ const AppPage = () => {
     startDate.setDate(endDate.getDate() - 3);
     return { startDate, endDate };
   });
+  const [sortBy, setSortBy] = useState('');
 
   useEffect(() => {
     const updateDateRange = () => {
@@ -50,7 +51,7 @@ const AppPage = () => {
         const dateStart = startDate.toISOString().split('T')[0];
         const dateEnd = endDate.toISOString().split('T')[0];
 
-        const calls = await fetchCalls(dateStart, dateEnd, filter);
+        const calls = await fetchCalls(dateStart, dateEnd, filter, sortBy);
         setRows(calls);
       } catch (error) {
         console.error(error);
@@ -58,7 +59,7 @@ const AppPage = () => {
     };
 
     getCalls();
-  }, [filter, dateRange, customDateRange]);
+  }, [filter, dateRange, customDateRange, sortBy]);
 
   const formattedRows = formatCalls(rows);
 
@@ -125,6 +126,14 @@ const AppPage = () => {
     }
   };
 
+  const handleSortByTime = () => {
+    setSortBy(sortBy === 'date' ? '' : 'date');
+  };
+
+  const handleSortByDuration = () => {
+    setSortBy(sortBy === 'duration' ? '' : 'duration');
+  };
+
   return (
     <div className="wrapper">
       <Filters
@@ -134,7 +143,11 @@ const AppPage = () => {
         onRightArrowClick={handleRightArrowClick}
         onCustomDateRangeChange={handleCustomDateRangeChange}
       />
-      <Table rows={formattedRows} />
+      <Table
+        rows={formattedRows}
+        onSortByTime={handleSortByTime}
+        onSortByDuration={handleSortByDuration}
+      />
     </div>
   );
 };

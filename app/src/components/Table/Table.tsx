@@ -15,14 +15,20 @@ interface TableRowData {
 
 interface TableProps {
   rows: TableRowData[];
+  onSortByTime: () => void;
+  onSortByDuration: () => void;
 }
 
-const Table: React.FC<TableProps> = ({ rows }) => {
+const Table: React.FC<TableProps> = ({
+  rows,
+  onSortByTime,
+  onSortByDuration,
+}) => {
   return (
     <div className="table">
       <div className="headers">
         <div className="row-type">Тип</div>
-        <div className="dropdown-button row-time">
+        <div className="dropdown-button row-time" onClick={onSortByTime}>
           <div>Время</div>
           <img
             src="/assets/arrow-down.png"
@@ -34,7 +40,7 @@ const Table: React.FC<TableProps> = ({ rows }) => {
         <div className="row-phone">Звонок</div>
         <div className="row-source">Источник</div>
         <div className="row-score">Оценка</div>
-        <div className="dropdown-button row-length">
+        <div className="dropdown-button row-length" onClick={onSortByDuration}>
           <div>Длительность</div>
           <img
             src="/assets/arrow-down.png"

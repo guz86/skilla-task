@@ -26,10 +26,11 @@ const token = 'testtoken';
 export const fetchCalls = async (
   dateStart: string,
   dateEnd: string,
-  inOut: string
+  inOut: string,
+  sortBy: string
 ): Promise<Call[]> => {
   try {
-    const url = `${API_URL}?date_start=${dateStart}&date_end=${dateEnd}${inOut ? `&in_out=${inOut}` : ''}`;
+    const url = `${API_URL}?date_start=${dateStart}&date_end=${dateEnd}${inOut ? `&in_out=${inOut}` : ''}${sortBy ? `&sort_by=${sortBy}` : ''}`;
 
     const response = await axios.post<ApiResponse>(
       url,
@@ -41,8 +42,6 @@ export const fetchCalls = async (
         },
       }
     );
-
-    console.log(response.data.results);
 
     return response.data.results;
   } catch (err) {
