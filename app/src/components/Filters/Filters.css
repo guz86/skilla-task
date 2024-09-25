@@ -50,11 +50,6 @@
 
 .arrow-icon {
   padding: 0px 4px;
-  transition: transform 0.2s;
-}
-
-.filter-arrow-icon:hover .arrow-icon {
-  transform: scale(1.1);
 }
 
 .dropdown-menu {
@@ -119,9 +114,56 @@
   border: 1px solid #bbb;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
   z-index: 1000;
-  margin-top: 150px;
+  margin-top: 220px;
   border-radius: 8px;
-  width: 133px;
+  width: 204px;
   text-align: left;
   color: #2b2d33;
+}
+
+.custom-date-range {
+  display: flex;
+  justify-content: center;
+  color: rgb(173, 191, 223);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.date-input {
+  display: flex;
+  align-items: baseline;
+}
+
+.date-field {
+  width: 18px;
+  padding-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+.date-field-year {
+  width: 28px;
+  padding-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+.date-separator {
+  font-size: 14px;
+}
+
+.date-range-separator {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.calendar-icon {
+  width: 16px;
+  height: 17.6px;
+  cursor: pointer;
+}
+
+.custom-date-range.active .date-field {
+  border-bottom: 2px solid #2563eb;
 }

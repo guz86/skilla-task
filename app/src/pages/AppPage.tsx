@@ -114,6 +114,17 @@ const AppPage = () => {
     setCustomDateRange({ startDate, endDate });
   };
 
+  const handleCustomDateRangeChange = (startDate: string, endDate: string) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    if (!isNaN(start.getTime()) && !isNaN(end.getTime()) && start <= end) {
+      setCustomDateRange({ startDate: start, endDate: end });
+    } else {
+      console.error('Invalid date range selected');
+    }
+  };
+
   return (
     <div className="wrapper">
       <Filters
@@ -121,6 +132,7 @@ const AppPage = () => {
         onDateRangeChange={setDateRange}
         onLeftArrowClick={handleLeftArrowClick}
         onRightArrowClick={handleRightArrowClick}
+        onCustomDateRangeChange={handleCustomDateRangeChange}
       />
       <Table rows={formattedRows} />
     </div>
