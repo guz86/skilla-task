@@ -49,16 +49,3 @@
 .row-call-image {
   padding: 6px;
 }
-
-.row-score-element {
-  padding: 6px 8px;
-  border: 1px solid rgb(40, 168, 121);
-  border-radius: 4px;
-  background: rgb(219, 248, 239);
-  width: 70px;
-  color: rgb(0, 167, 117);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 100%;
-  text-align: left;
-}

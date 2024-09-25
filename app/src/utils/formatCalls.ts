@@ -1,5 +1,8 @@
 import { Call } from './api';
 
+const scores = ['Good', 'Excellent', 'Bad', 'Not Used'];
+const sources = ['', 'Rabota.ru', 'Санкт-Петербург', 'Google', 'Yandex'];
+
 export const formatCalls = (calls: Call[]) => {
   return calls.map((call) => {
     const time = call.date.split(' ')[1];
@@ -21,13 +24,17 @@ export const formatCalls = (calls: Call[]) => {
     const callLength =
       call.time > 0 ? `${formattedMinutes}:${formattedSeconds}` : '';
 
+    const score = scores[Math.floor(Math.random() * scores.length)];
+
+    const source = sources[Math.floor(Math.random() * sources.length)];
+
     return {
       typeImage,
       time: `${hours}:${minutes}`,
       avatar: call.person_avatar || 'https://lk.skilla.ru/img/noavatar.jpg',
       phone: call.from_number,
-      source: call.source || '',
-      score: 'Отлично',
+      source,
+      score,
       length: callLength,
       record: call.record,
       partnership_id: call.partnership_id,

@@ -27,6 +27,25 @@ const TableRow: React.FC<TableRowProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const getScoreDetails = () => {
+    switch (score) {
+      case 'Excellent':
+        return { className: 'row-score-element-green', text: 'Отлично' };
+      case 'Good':
+        return { className: 'row-score-element-yellow', text: 'Хорошо' };
+      case 'Bad':
+        return { className: 'row-score-element-red', text: 'Плохо' };
+      case 'Not Used':
+      default:
+        return {
+          className: 'row-score-element',
+          text: 'Скрипт не использован',
+        };
+    }
+  };
+
+  const { className, text } = getScoreDetails();
+
   return (
     <div
       className="row"
@@ -43,7 +62,7 @@ const TableRow: React.FC<TableRowProps> = ({
       <div className="row-phone">{phone}</div>
       <div className="row-source">{source}</div>
       <div className="row-score">
-        <div className="row-score-element">{score}</div>
+        <div className={className}>{text}</div>
       </div>
       <div className="row-length">
         <AudioRow
