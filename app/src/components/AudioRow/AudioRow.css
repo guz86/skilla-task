@@ -1,6 +1,6 @@
 .row-audio {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   height: 48px;
@@ -30,22 +30,33 @@
 }
 
 .row-audio-line {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 164px;
+  width: 150px;
   height: 4px;
-  border-radius: 50px;
   background: rgb(173, 191, 223);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
 }
 
-.row-audio-download {
+.row-audio-line-progress {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+}
+
+.row-audio-download,
+.row-audio-clear {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 50px;
 }
 
-.row-call-image {
-  padding: 6px;
+.row-audio-buttons {
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.row-audio-length {
+  padding-left: 20px;
 }

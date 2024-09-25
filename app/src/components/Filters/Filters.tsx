@@ -116,7 +116,7 @@ const Filters: React.FC<FiltersProps> = ({
           {currentFilter !== 'Все типы' && (
             <div className="reset-filters-close" onClick={handleResetFilters}>
               <div className="reset-filters">Сбросить фильтры</div>
-              <img src="/assets/close.png" alt="close" />
+              <img src="/assets/button-delete.png" alt="close" />
             </div>
           )}
         </div>
