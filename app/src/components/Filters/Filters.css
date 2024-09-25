@@ -1,0 +1,169 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.type-filter {
+  color: rgb(94, 119, 147);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+
+.day-filter {
+  color: rgb(0, 44, 251);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.day-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.day-filter-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-arrow-icon {
+  width: 17px;
+  cursor: pointer;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #5e7793;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 148%;
+}
+
+.arrow-icon {
+  padding: 0px 4px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #bbb;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  margin-top: 3px;
+  border-radius: 8px;
+  width: 133px;
+  text-align: left;
+  color: #2b2d33;
+}
+
+.type-filter .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: rgb(222, 228, 255);
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.arrow-down {
+  transform: rotate(0deg);
+}
+
+.filter-text {
+  color: #5e7793;
+}
+
+.active-filter {
+  color: #015ef5;
+}
+
+.reset-filters {
+  padding-left: 10px;
+}
+
+.reset-filters-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.date-dropdown {
+  display: block;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #bbb;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  margin-top: 220px;
+  border-radius: 8px;
+  width: 204px;
+  text-align: left;
+  color: #2b2d33;
+}
+
+.custom-date-range {
+  display: flex;
+  justify-content: center;
+  color: rgb(173, 191, 223);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.date-input {
+  display: flex;
+  align-items: baseline;
+}
+
+.date-field {
+  width: 18px;
+  padding-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+.date-field-year {
+  width: 28px;
+  padding-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+.date-separator {
+  font-size: 14px;
+}
+
+.date-range-separator {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.calendar-icon {
+  width: 16px;
+  height: 17.6px;
+  cursor: pointer;
+}
+
+.custom-date-range.active .date-field {
+  border-bottom: 2px solid #2563eb;
+}

@@ -1,0 +1,106 @@
+.row {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  cursor: pointer;
+  border: 1px solid rgb(234, 240, 250);
+  padding: 0 23px 0 40px;
+}
+
+.row:hover {
+  background: rgba(212, 223, 243, 0.17);
+}
+
+.row-type {
+  text-align: left;
+  width: 3.97%;
+}
+
+.row-time {
+  text-align: left;
+  width: 6.47%;
+}
+
+.row-avatar {
+  text-align: left;
+  width: 9.49%;
+}
+
+.row-avatar-img {
+  width: 32px;
+  height: 32px;
+}
+
+.row-phone {
+  text-align: left;
+  width: 23.9%;
+}
+
+.row-source {
+  text-align: left;
+  width: 15.74%;
+  color: rgb(94, 119, 147);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.row-score {
+  text-align: left;
+  width: 12.09%;
+}
+
+.row-length {
+  justify-content: flex-end;
+  width: 28.9%;
+}
+
+.row-score-element-green {
+  padding: 6px 8px;
+  border: 1px solid rgb(40, 168, 121);
+  border-radius: 4px;
+  background: rgb(219, 248, 239);
+  width: 70px;
+  color: rgb(0, 167, 117);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+}
+
+.row-score-element-yellow {
+  padding: 6px 8px;
+  border: 1px solid rgb(173, 191, 223);
+  border-radius: 4px;
+  background: rgb(216, 228, 251);
+  border-radius: 4px;
+  width: 66px;
+  color: rgb(18, 41, 69);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+}
+
+.row-score-element-red {
+  padding: 6px 8px;
+  border: 1px solid rgb(234, 26, 79);
+  border-radius: 4px;
+  background: rgb(254, 233, 239);
+  width: 56px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+  color: rgb(234, 26, 79);
+}
+
+.row-score-element {
+  padding: 6px 8px;
+  color: rgb(234, 26, 79);
+  width: 200px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: left;
+}
