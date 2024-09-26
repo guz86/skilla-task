@@ -16,8 +16,8 @@ Deploy: [https://skilla-task-phi.vercel.app/](https://skilla-task-phi.vercel.app
 ## Setup and Running
 
 - Use `node 21.x` or higher.
-- Clone this repo: `$ git clone https://github.com/guz86/alfa-task.git`.
-- Go to downloaded folder: `$ cd alfa-app`.
+- Clone this repo: `$ git clone https://github.com/guz86/skilla-task.git`.
+- Go to downloaded folder: `$ cd app`.
 - Install dependencies: `$ npm install`.
 - Start server: `$ npm run dev`.
 - Now you can see web application to the address: `http://localhost:5174/app/`.
