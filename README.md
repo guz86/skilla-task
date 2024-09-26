@@ -53,6 +53,8 @@ npm run dev
 
 ## Task
 
+![image](https://github.com/user-attachments/assets/e113e2b9-afe0-46b4-b63a-e92e3e26659f)
+
 Требуется взять из фигмы проект и разработать функционал по заданию на React. Данные можно взять с бека по API отсюда https://api.skilla.ru/testapi. Тестовый токен — testtoken.  
 Функционал, которую необходимо разработать: 
 - отображение списка звонков с выборкой по датам (date picker); 
